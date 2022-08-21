@@ -178,6 +178,7 @@ async function run(): Promise<void> {
   const sdkManager = await installSdkManager()
   core.debug(`sdkmanager installed to: ${sdkManager}`)
   await callSdkManager(sdkManager, '--licenses')
+  await callSdkManager(sdkManager, '--channel=3')
   await callSdkManager(sdkManager, 'tools')
   await callSdkManager(sdkManager, 'platform-tools')
 
